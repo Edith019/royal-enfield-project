@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Enfield – Digital Marketing Campaign Dashboard</title>
+  
+  <!-- SEO & Presentation Meta -->
+  <meta name="description" content="Digital Marketing Strategy, Content Calendar, AI Generator, and Campaign Analytics for Royal Enfield motorcycles.">
+  <meta name="theme-color" content="#0a0c10">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Chart.js for Campaign Analytics via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ===================================================================
+       1. NAVIGATION BAR
+       =================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="brand-badge">
+          <img src="assets/images/badge.svg" alt="Royal Enfield Badge">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">ROYAL ENFIELD</span>
+          <span class="brand-sub">Digital Campaign Hub</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#social-media" class="nav-link">Social Media</a></li>
+        <li><a href="#content-calendar" class="nav-link">7-Day Calendar</a></li>
+        <li><a href="#strategy" class="nav-link">Strategy</a></li>
+        <li><a href="#ai-assistant" class="nav-link">AI Assistant</a></li>
+        <li><a href="#analytics" class="nav-link">Analytics</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-gold btn-sm" onclick="openTestRideModal()">Book Test Ride</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================================================================
+       1. HOME / CAMPAIGN LANDING PAGE
+       =================================================================== -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="hero-tag-pulse"></span>
+          <span>Digital Launch Campaign 2026</span>
+        </div>
+        <h1 class="hero-title">
+          Ride Beyond <br>
+          <span class="gold-gradient-text">Limits.</span>
+        </h1>
+        <p class="hero-desc">
+          Igniting the spirit of pure motorcycling across digital frontiers. An omnichannel social campaign built to engage youth riders, amplify exhaust-note storytelling, and convert adrenaline into dealership test rides.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#overview" class="btn btn-primary">Explore Campaign</a>
+          <button class="btn btn-outline" onclick="openTestRideModal()">Book a Test Ride</button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">350 - 650<span class="text-gold">cc</span></span>
+            <span class="hero-stat-label">Heritage Fleet</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">18-35</span>
+            <span class="hero-stat-label">Core Demographic</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">360°</span>
+            <span class="hero-stat-label">Digital Presence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image-card">
+          <!-- Curated high-res motorcycle photography with SVG fallback -->
+          <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80" 
+               alt="Royal Enfield Style Motorcycle" 
+               onerror="this.onerror=null; this.src='assets/images/motorcycle.svg';">
+          <div class="floating-badge">
+            <div class="floating-badge-icon">🏍️</div>
+            <div>
+              <div class="floating-badge-title">Pure Motorcycling</div>
+              <div class="floating-badge-sub">High-Throttle Campaign</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       2. CAMPAIGN OVERVIEW
+       =================================================================== -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Executive Summary</span>
+        <h2 class="section-title">Campaign <span class="gold-gradient-text">Overview</span></h2>
+        <p class="section-subtitle">
+          Strategic blueprint demonstrating how Royal Enfield captures next-gen riders through authentic storytelling, high-tempo digital distribution, and measurable conversion.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <!-- Objective -->
+        <div class="overview-card">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Campaign Objective</h3>
+          <p class="card-desc">
+            To position Royal Enfield motorcycles as the ultimate choice for both urban commuters and weekend wanderers, driving unprecedented awareness and dealership footfalls.
+          </p>
+          <span class="card-badge-pill">Awareness & Consideration</span>
+        </div>
+
+        <!-- Target Audience -->
+        <div class="overview-card">
+          <div class="card-icon">👥</div>
+          <h3 class="card-title">Target Audience</h3>
+          <p class="card-desc">
+            Ages <strong>18–35</strong>: Urban explorers, college youth, adventure enthusiasts, touring clubs, and neo-retro aesthetic lovers seeking authentic character.
+          </p>
+          <span class="card-badge-pill">Gen-Z & Millennials</span>
+        </div>
+
+        <!-- Marketing Platforms -->
+        <div class="overview-card">
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">Marketing Platforms</h3>
+          <p class="card-desc">
+            Primary focus on <strong>Instagram</strong> (visual lifestyle & short reels), <strong>YouTube</strong> (cinematic reviews & vlogs), and <strong>Facebook</strong> (rider brotherhood & events).
+          </p>
+          <span class="card-badge-pill">Instagram • YouTube • Facebook</span>
+        </div>
+
+        <!-- Duration & Goals -->
+        <div class="overview-card">
+          <div class="card-icon">🏆</div>
+          <h3 class="card-title">Campaign Goals</h3>
+          <p class="card-desc">
+            Achieve 5M+ impressions, a 7.5%+ social engagement rate, and collect 5,000+ verified test ride bookings across major metropolitan and tier-2 hubs.
+          </p>
+          <span class="card-badge-pill">30-Day Sprint Strategy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       3. SOCIAL MEDIA CAMPAIGN
+       =================================================================== -->
+  <section class="social-campaign" id="social-media">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Content Execution</span>
+        <h2 class="section-title">Social Media <span class="gold-gradient-text">Campaign Showcase</span></h2>
+        <p class="section-subtitle">
+          High-impact creative assets designed across leading social channels with compelling copywriting, tactical CTAs, and algorithm-optimized hashtags.
+        </p>
+      </div>
+
+      <div class="social-grid">
+        <!-- Card 1: Instagram Post -->
+        <div class="social-card">
+          <div>
+            <div class="social-card-header">
+              <span class="platform-pill platform-instagram">Instagram</span>
+              <span class="post-type-tag">Photo Carousel</span>
+            </div>
+            <h4 class="social-idea">Urban Streets Meets Pure Heritage</h4>
+            <div class="social-caption-box">
+              "Every road has a story. Make yours unforgettable. Crafted with pure metal, timeless thump, and a heart hungry for asphalt. 🏍️✨"
+            </div>
+            <div class="social-cta-box">
+              <span>👉 CTA: Swipe to explore specs & find your nearest store</span>
+            </div>
+            <div class="social-hashtags">
+              #RoyalEnfield #RidePure #Hunter350 #PureMotorcycling #TwoWheelsOneHeart
+            </div>
+          </div>
+          <div class="social-card-footer">
+            <span class="card-badge-pill">Goal: Brand Awareness</span>
+            <button class="copy-caption-btn" onclick="copyText('Every road has a story. Make yours unforgettable. Crafted with pure metal, timeless thump, and a heart hungry for asphalt. 🏍️✨ #RoyalEnfield #RidePure')">
+              📋 Copy Caption
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Instagram Reel -->
+        <div class="social-card">
+          <div>
+            <div class="social-card-header">
+              <span class="platform-pill platform-instagram">Instagram</span>
+              <span class="post-type-tag">Trending Reel</span>
+            </div>
+            <h4 class="social-idea">The Signature Thump (ASMR Exhaust)</h4>
+            <div class="social-caption-box">
+              "Headphones on. Throttle rolled back. That is not just sound—it is the heartbeat of pure adventure. Can you feel the vibration? 🔥"
+            </div>
+            <div class="social-cta-box">
+              <span>👉 CTA: Drop a 🏍️ in comments if you ride today</span>
+            </div>
+            <div class="social-hashtags">
+              #REThump #MotorcycleReels #ExhaustSound #BikerGram #RideBeyondLimits
+            </div>
+          </div>
+          <div class="social-card-footer">
+            <span class="card-badge-pill">Goal: Viral Reach</span>
+            <button class="copy-caption-btn" onclick="copyText('Headphones on. Throttle rolled back. That is not just sound—it is the heartbeat of pure adventure. Can you feel the vibration? 🔥 #REThump #MotorcycleReels')">
+              📋 Copy Caption
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Instagram Story -->
+        <div class="social-card">
+          <div>
+            <div class="social-card-header">
+              <span class="platform-pill platform-instagram">Instagram</span>
+              <span class="post-type-tag">Interactive Story</span>
+            </div>
+            <h4 class="social-idea">Interactive Poll: Mountains vs Coastline</h4>
+            <div class="social-caption-box">
+              "Where is your Royal Enfield taking you this weekend? Vote below! ⛰️ High mountain passes or 🌊 Endless coastal roads?"
+            </div>
+            <div class="social-cta-box">
+              <span>👉 CTA: Tap the sticker to vote & swipe up for the route map</span>
+            </div>
+            <div class="social-hashtags">
+              #WeekendRides #REHimalayan #ExploreMore #RidersOfInstagram
+            </div>
+          </div>
+          <div class="social-card-footer">
+            <span class="card-badge-pill">Goal: Story Engagement</span>
+            <button class="copy-caption-btn" onclick="copyText('Where is your Royal Enfield taking you this weekend? Vote below! ⛰️ High mountain passes or 🌊 Endless coastal roads? #WeekendRides #REHimalayan')">
+              📋 Copy Caption
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: YouTube Short -->
+        <div class="social-card">
+          <div>
+            <div class="social-card-header">
+              <span class="platform-pill platform-youtube">YouTube</span>
+              <span class="post-type-tag">YouTube Short</span>
+            </div>
+            <h4 class="social-idea">0 to 80 km/h: The Raw Acceleration Test</h4>
+            <div class="social-caption-box">
+              "Smooth low-end torque. Unshakable straight-line stability. Watch how effortlessly this beast dominates urban highway traffic in under 60 seconds."
+            </div>
+            <div class="social-cta-box">
+              <span>👉 CTA: Click link in bio to book your free test ride</span>
+            </div>
+            <div class="social-hashtags">
+              #YouTubeShorts #BikeReview #RoyalEnfieldAcceleration #TestRideNow
+            </div>
+          </div>
+          <div class="social-card-footer">
+            <span class="card-badge-pill">Goal: High-Intent Clicks</span>
+            <button class="copy-caption-btn" onclick="copyText('Smooth low-end torque. Unshakable straight-line stability. Watch how effortlessly this beast dominates urban traffic. Click link in bio to book test ride! #YouTubeShorts')">
+              📋 Copy Caption
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Facebook Post -->
+        <div class="social-card">
+          <div>
+            <div class="social-card-header">
+              <span class="platform-pill platform-facebook">Facebook</span>
+              <span class="post-type-tag">Community Post</span>
+            </div>
+            <h4 class="social-idea">Rider Brotherhood: 1,000 Riders, 1 Passion</h4>
+            <div class="social-caption-box">
+              "A motorcycle isn't just metal and tires; it’s a membership to a lifelong family. Over 1,000 riders gathered for One Ride 2026. Tag your riding buddy who never misses a weekend throttle session! 🤝"
+            </div>
+            <div class="social-cta-box">
+              <span>👉 CTA: Join the official Royal Enfield Rider Community</span>
+            </div>
+            <div class="social-hashtags">
+              #OneRide #RoyalEnfieldCommunity #BikerBrotherhood #RideAsOne
+            </div>
+          </div>
+          <div class="social-card-footer">
+            <span class="card-badge-pill">Goal: Community Building</span>
+            <button class="copy-caption-btn" onclick="copyText('A motorcycle isn\'t just metal and tires; it\'s a membership to a lifelong family. Tag your riding buddy! 🤝 #OneRide #RoyalEnfieldCommunity')">
+              📋 Copy Caption
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       4. 7-DAY CONTENT CALENDAR
+       =================================================================== -->
+  <section class="calendar-section" id="content-calendar">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Publishing Roadmap</span>
+        <h2 class="section-title">7-Day <span class="gold-gradient-text">Content Calendar</span></h2>
+        <p class="section-subtitle">
+          A synchronized weekly release rhythm engineered to build curiosity, nurture desire, and trigger high-conversion test ride bookings.
+        </p>
+      </div>
+
+      <!-- Day Switcher Tabs -->
+      <div class="calendar-tabs" id="calendarTabs">
+        <button class="day-tab-btn active" data-day="1">Day 1: Intro</button>
+        <button class="day-tab-btn" data-day="2">Day 2: Features</button>
+        <button class="day-tab-btn" data-day="3">Day 3: Riding Reel</button>
+        <button class="day-tab-btn" data-day="4">Day 4: Experience</button>
+        <button class="day-tab-btn" data-day="5">Day 5: Adventure</button>
+        <button class="day-tab-btn" data-day="6">Day 6: Test Ride</button>
+        <button class="day-tab-btn" data-day="7">Day 7: Booking CTA</button>
+      </div>
+
+      <!-- Dynamic Content View Card -->
+      <div class="calendar-display-card" id="calendarDisplayCard">
+        <div class="day-content-grid">
+          <div>
+            <div class="day-badge-row">
+              <span class="day-number-badge" id="calDayBadge">DAY 1</span>
+              <span class="card-badge-pill" id="calFormatBadge">Format: Teaser Reel & Carousel</span>
+            </div>
+            <h3 class="day-theme-title" id="calThemeTitle">Bike Introduction: The Rebirth of a Legend</h3>
+            <p class="day-narrative" id="calNarrative">
+              Launch day kicks off with a cinematic high-contrast silhouette teaser focusing on the iconic sculpted fuel tank, chrome engine contours, and the historic Royal Enfield insignia. The goal is sheer intrigue and buzz generation.
+            </p>
+            <div class="social-caption-box" id="calCaption">
+              "Legends don't fade; they evolve. Meet the machine built to conquer tomorrow's horizons while honoring 125 years of motorcycling heritage. Unveiling today. 🏍️⚡"
+            </div>
+          </div>
+
+          <div class="day-meta-box">
+            <h4 style="font-size: 1.1rem; margin-bottom: 14px; color: var(--gold-accent);">Publishing Specs</h4>
+            <div class="meta-item">
+              <span class="meta-label">Primary Channel</span>
+              <span class="meta-val" id="calChannel">Instagram & YouTube</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target KPI</span>
+              <span class="meta-val" id="calKpi">Viral Reach & Shares</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Best Post Time</span>
+              <span class="meta-val" id="calTime">7:30 PM IST</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Call to Action</span>
+              <span class="meta-val" id="calCta">Turn On Post Notifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       5. MARKETING STRATEGY
+       =================================================================== -->
+  <section class="strategy-section" id="strategy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Pillars</span>
+        <h2 class="section-title">Marketing <span class="gold-gradient-text">Strategy</span></h2>
+        <p class="section-subtitle">
+          Six foundational marketing pillars driving customer acquisition, brand loyalty, and measurable sales conversion across touchpoints.
+        </p>
+      </div>
+
+      <div class="strategy-grid">
+        <!-- 1. Content Marketing -->
+        <div class="strategy-card">
+          <span class="strategy-num">01</span>
+          <div class="strategy-icon">✍️</div>
+          <h3 class="strategy-title">Content Marketing</h3>
+          <p class="strategy-desc">
+            Craft authentic travelogues, maintenance masterclasses, and rider spotlight stories that celebrate the motorcycle lifestyle beyond basic product specifications.
+          </p>
+        </div>
+
+        <!-- 2. Social Media Marketing -->
+        <div class="strategy-card">
+          <span class="strategy-num">02</span>
+          <div class="strategy-icon">📱</div>
+          <h3 class="strategy-title">Social Media Marketing</h3>
+          <p class="strategy-desc">
+            Leverage dynamic short-form video reels, sound-on ASMR exhaust notes, and daily interactive story polls to capture algorithmic momentum and Gen-Z engagement.
+          </p>
+        </div>
+
+        <!-- 3. Influencer Marketing -->
+        <div class="strategy-card">
+          <span class="strategy-num">03</span>
+          <div class="strategy-icon">🌟</div>
+          <h3 class="strategy-title">Influencer Collaborations</h3>
+          <p class="strategy-desc">
+            Partner with authentic moto-vloggers and adventure creators for unfiltered cross-country expedition rides to build genuine word-of-mouth trust.
+          </p>
+        </div>
+
+        <!-- 4. Paid Advertising -->
+        <div class="strategy-card">
+          <span class="strategy-num">04</span>
+          <div class="strategy-icon">🎯</div>
+          <h3 class="strategy-title">Paid Advertising</h3>
+          <p class="strategy-desc">
+            Deploy hyper-targeted Meta Lead Ads and YouTube bumper video ads focused on users interested in motorcycling, touring gear, and urban commuting.
+          </p>
+        </div>
+
+        <!-- 5. Search / SEO -->
+        <div class="strategy-card">
+          <span class="strategy-num">05</span>
+          <div class="strategy-icon">🔍</div>
+          <h3 class="strategy-title">Search & Local SEO</h3>
+          <p class="strategy-desc">
+            Optimize dealership Google Business profiles and bid on high-intent search terms like "best 350cc cruiser" and "book test ride near me" for frictionless discovery.
+          </p>
+        </div>
+
+        <!-- 6. Customer Engagement -->
+        <div class="strategy-card">
+          <span class="strategy-num">06</span>
+          <div class="strategy-icon">🤝</div>
+          <h3 class="strategy-title">Customer & Community</h3>
+          <p class="strategy-desc">
+            Foster lasting brand loyalty by organizing weekend breakfast rides, annual 'One Ride' rallies, and owner custom-build showcases across India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       6. AI MARKETING ASSISTANT (Interactive)
+       =================================================================== -->
+  <section class="ai-section" id="ai-assistant">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Feature</span>
+        <h2 class="section-title">AI Marketing <span class="gold-gradient-text">Assistant</span></h2>
+        <p class="section-subtitle">
+          Simulated intelligent marketing copy engine. Select your motorcycle model and target tone, then click to generate customized campaign assets in real-time.
+        </p>
+      </div>
+
+      <div class="ai-container-card">
+        <!-- Input Selectors -->
+        <div class="ai-controls-row">
+          <div class="ai-select-group">
+            <label for="aiModelSelect">Select Bike Model</label>
+            <select class="ai-select" id="aiModelSelect">
+              <option value="hunter">Royal Enfield Hunter 350 (Urban Rebel)</option>
+              <option value="himalayan" selected>Royal Enfield Himalayan 450 (Adventure)</option>
+              <option value="classic">Royal Enfield Classic 350 (Timeless Icon)</option>
+              <option value="continental">Royal Enfield Continental GT 650 (Cafe Racer)</option>
+            </select>
+          </div>
+
+          <div class="ai-select-group">
+            <label for="aiToneSelect">Select Campaign Tone</label>
+            <select class="ai-select" id="aiToneSelect">
+              <option value="adventurous">Rugged & Adventurous</option>
+              <option value="urban">Urban & High-Energy</option>
+              <option value="heritage">Heritage & Soulful</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="ai-buttons-grid">
+          <button class="ai-btn active" id="btnGenCaption" onclick="generateAiContent('caption')">
+            <span>✨</span> Generate Caption
+          </button>
+          <button class="ai-btn" id="btnGenHashtags" onclick="generateAiContent('hashtags')">
+            <span>#️⃣</span> Generate Hashtags
+          </button>
+          <button class="ai-btn" id="btnGenAdCopy" onclick="generateAiContent('adcopy')">
+            <span>📢</span> Generate Ad Copy
+          </button>
+          <button class="ai-btn" id="btnGenReelIdea" onclick="generateAiContent('reel')">
+            <span>🎬</span> Generate Reel Idea
+          </button>
+        </div>
+
+        <!-- AI Output Display Box -->
+        <div class="ai-output-box">
+          <div class="ai-output-header">
+            <span class="ai-status-tag">
+              <span class="ai-status-dot"></span>
+              <span id="aiStatusText">AI Output Ready</span>
+            </span>
+            <button class="copy-caption-btn" onclick="copyAiOutput()">
+              📋 Copy Output
+            </button>
+          </div>
+          <div class="ai-output-content" id="aiOutputContent">Where the paved road ends, your true story begins. The all-new Himalayan 450 is engineered to conquer snow-covered passes and untamed riverbeds. Pack your bags; the mountains are calling.<span class="typing-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       7. CAMPAIGN ANALYTICS DASHBOARD (Chart.js)
+       =================================================================== -->
+  <section class="analytics-section" id="analytics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Performance Metrics</span>
+        <h2 class="section-title">Campaign <span class="gold-gradient-text">Analytics Dashboard</span></h2>
+        <p class="section-subtitle">
+          Data-driven marketing results tracking multi-channel reach, audience retention, and high-conversion test ride lead generation.
+        </p>
+      </div>
+
+      <!-- Demo Data Notice Banner -->
+      <div class="demo-data-banner">
+        <div class="demo-data-text">
+          <span>📊</span>
+          <strong>Demo Campaign Data:</strong> Simulated metrics formulated for academic evaluation and marketing case presentation.
+        </div>
+        <span class="card-badge-pill">30-Day Campaign Window</span>
+      </div>
+
+      <!-- Key KPI Stat Metric Cards -->
+      <div class="analytics-stats-grid">
+        <div class="stat-metric-card">
+          <div class="stat-label">Total Reach</div>
+          <div class="stat-val">2.45M</div>
+          <div class="stat-trend">↑ +24.8% vs target</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="stat-label">Impressions</div>
+          <div class="stat-val">5.82M</div>
+          <div class="stat-trend">↑ +31.2% over-index</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="stat-label">Engagement</div>
+          <div class="stat-val">482K</div>
+          <div class="stat-trend">↑ 8.28% avg rate</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="stat-label">Link Clicks</div>
+          <div class="stat-val">128.4K</div>
+          <div class="stat-trend">↑ ₹4.20 CPC</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="stat-label">Test Ride Leads</div>
+          <div class="stat-val">6,850</div>
+          <div class="stat-trend">↑ 92% verified intent</div>
+        </div>
+
+        <div class="stat-metric-card">
+          <div class="stat-label">Engagement Rate</div>
+          <div class="stat-val">8.28%</div>
+          <div class="stat-trend">↑ 2.1x industry benchmark</div>
+        </div>
+      </div>
+
+      <!-- Interactive Charts Grid -->
+      <div class="charts-grid">
+        <!-- 1. Line Chart: Reach Growth -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Weekly Reach & Impression Growth</h3>
+            <span class="card-badge-pill">Weekly Progression</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="reachLineChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 2. Doughnut Chart: Platform Distribution -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Platform & Audience Share</h3>
+            <span class="card-badge-pill">Share of Voice</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="platformDoughnutChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 3. Bar Chart: Platform Engagement -->
+        <div class="chart-card chart-full-width">
+          <div class="chart-header">
+            <h3 class="chart-title">Engagement Comparison Across Marketing Channels</h3>
+            <span class="card-badge-pill">Total Interactions (Likes, Shares, Comments)</span>
+          </div>
+          <div class="chart-canvas-wrapper">
+            <canvas id="engagementBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       8. CAMPAIGN CTA SECTION
+       =================================================================== -->
+  <section class="cta-section">
+    <div class="container cta-box">
+      <span class="section-tag">Start Your Journey</span>
+      <h2 class="cta-title">Your Next Ride <br><span class="gold-gradient-text">Starts Here.</span></h2>
+      <p class="cta-desc">
+        Feel the raw heartbeat of the motorcycle. Experience unmatched torque, legendary craftsmanship, and the freedom of the open road.
+      </p>
+      <div class="cta-buttons-row">
+        <button class="btn btn-primary" onclick="openTestRideModal()">Book a Test Ride</button>
+        <a href="#home" class="btn btn-outline">Explore Campaign</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom: 12px;">
+            <div class="brand-badge">
+              <img src="assets/images/badge.svg" alt="Badge">
+            </div>
+            <div class="brand-titles">
+              <span class="brand-name">ROYAL ENFIELD</span>
+              <span class="brand-sub">Digital Marketing Project</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            An academic digital marketing campaign project demonstrating multi-channel social media execution, AI-assisted content strategy, and performance analytics.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Campaign Sections</h4>
+          <ul class="footer-links">
+            <li><a href="#overview">Campaign Overview</a></li>
+            <li><a href="#social-media">Social Media Posts</a></li>
+            <li><a href="#content-calendar">7-Day Content Calendar</a></li>
+            <li><a href="#strategy">Marketing Strategy</a></li>
+            <li><a href="#ai-assistant">AI Marketing Assistant</a></li>
+            <li><a href="#analytics">Campaign Analytics</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Academic Info</h4>
+          <ul class="footer-links">
+            <li><span style="color: var(--gold-accent);">Project:</span> Digital Marketing Strategy</li>
+            <li><span style="color: var(--gold-accent);">Brand Focus:</span> Royal Enfield</li>
+            <li><span style="color: var(--gold-accent);">Stack:</span> HTML, CSS, JS, Chart.js</li>
+            <li><span style="color: var(--gold-accent);">Demonstration:</span> Ready for evaluation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Royal Enfield Digital Marketing Campaign Project. All trademarks belong to their respective owners.</span>
+        <span>Simulated Academic Demo</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       TEST RIDE BOOKING MODAL
+       =================================================================== -->
+  <div class="modal-backdrop" id="testRideModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeTestRideModal()">&times;</button>
+      
+      <div id="modalFormContainer">
+        <div class="modal-header">
+          <span class="section-tag" style="margin-bottom: 8px;">Direct Lead Conversion</span>
+          <h3 class="modal-title">Book a <span class="gold-gradient-text">Test Ride</span></h3>
+          <p class="modal-subtitle">Experience the unmistakable thump at your nearest dealership.</p>
+        </div>
+
+        <form class="modal-form" id="testRideForm" onsubmit="handleTestRideSubmit(event)">
+          <div class="form-group">
+            <label for="riderName">Full Name</label>
+            <input type="text" id="riderName" class="form-input" placeholder="e.g. Rahul Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="riderPhone">Phone Number</label>
+            <input type="tel" id="riderPhone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+          </div>
+
+          <div class="form-group">
+            <label for="bikeChoice">Select Motorcycle</label>
+            <select id="bikeChoice" class="form-select">
+              <option value="Hunter 350">Royal Enfield Hunter 350</option>
+              <option value="Himalayan 450" selected>Royal Enfield Himalayan 450</option>
+              <option value="Classic 350">Royal Enfield Classic 350</option>
+              <option value="Continental GT 650">Royal Enfield Continental GT 650</option>
+              <option value="Meteor 350">Royal Enfield Meteor 350</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="riderCity">Your City / Dealership</label>
+            <input type="text" id="riderCity" class="form-input" placeholder="e.g. Mumbai, Delhi, Bengaluru" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+            Confirm Test Ride
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="modal-success-screen" id="modalSuccessScreen">
+        <div class="success-icon">✓</div>
+        <h3 class="modal-title" style="font-size: 1.6rem; color: #10b981;">Test Ride Confirmed!</h3>
+        <p class="modal-subtitle">Your dealership appointment has been registered successfully.</p>
+        
+        <div class="success-booking-id" id="successBookingId">RE-TR-89421</div>
+
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">
+          Our community ride coordinator will reach out to you within 2 business hours. Get ready to feel the thump!
+        </p>
+
+        <button class="btn btn-gold btn-sm" onclick="closeTestRideModal()">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       TOAST NOTIFICATION
+       =================================================================== -->
+  <div class="toast-container">
+    <div class="toast" id="toastMessage">
+      <span>✓</span>
+      <span id="toastText">Content copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
